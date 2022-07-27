@@ -1,16 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
-const Home = () => {
+const Works = () => {
   return (
     <div className="font-extrabold">
-      Home
+      Works
       <nav>
         <Link to="/invoices">Invoices</Link> |{" "}
         <Link to="/components">Components</Link> |{" "}
         <Link to="/about">About</Link>
       </nav>
+      <Outlet />
     </div>
   );
 };
 
-export default Home;
+export default Works;
