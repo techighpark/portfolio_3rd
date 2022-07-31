@@ -1,4 +1,4 @@
-import LinkText from "@components/element/LinkText";
+import LinkText from "@components/element/LinkButton";
 import { Link } from "react-router-dom";
 
 const Nav = () => {

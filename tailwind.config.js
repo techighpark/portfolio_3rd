@@ -4,6 +4,10 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      black: "black",
+      white: "white",
       primary: {
         light: "#ff6c4d",
         default: "#ff421a",
@@ -22,7 +26,7 @@ module.exports = {
       success: "",
       warning: "",
       danger: "",
-      font: {
+      basic: {
         dark: {
           light: "#010101",
           default: "#1b1b1b",
@@ -36,9 +40,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/aspect-ratio"),
-  ],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 };
