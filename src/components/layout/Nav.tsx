@@ -1,14 +1,21 @@
+import LinkText from "@components/element/LinkText";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav className="flex gap-x-3 justify-center bg-red-300">
+    <nav className="flex gap-x-3 justify-center">
       <Link to="/">
-        <div className="rounded-md p-2 shadow-md backdrop-opacity-10">Home</div>
+        <LinkText text="Main" />
       </Link>
-      <Link to="/works">Works</Link>
-      <Link to="/components">Components</Link>
-      <Link to="/about">About</Link>
+      <Link to="/works">
+        <LinkText text="About" />
+      </Link>
+      <Link to="/components">
+        <LinkText text="Works" />
+      </Link>
+      <Link to="/about">
+        <LinkText text="Components" />
+      </Link>
     </nav>
   );
 };

@@ -3,7 +3,7 @@ interface buttonProps {
 }
 
 const Button = ({ text }: buttonProps) => {
-  return <div className="bg-red-500">{text}</div>;
+  return <div className="bg-primary-default">{text}</div>;
 };
 
 export default Button;

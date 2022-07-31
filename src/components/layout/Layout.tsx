@@ -7,7 +7,7 @@ interface LayoutProps {
 
 const Layout = ({ pageTitle, children }: LayoutProps) => {
   return (
-    <div>
+    <div className="w-full h-full ">
       <PageTitle title={pageTitle} />
       <Header />
       {children}
