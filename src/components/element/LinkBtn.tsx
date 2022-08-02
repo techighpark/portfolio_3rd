@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 interface linkBtnProps {
   to: string;
@@ -8,7 +9,7 @@ interface linkBtnProps {
 
 const LinkBtn = ({ to, text, active }: linkBtnProps) => {
   return (
-    <Link to={to} className="flex items-center">
+    <ScrollLink to={to} className="flex items-center" spy={true} smooth={true}>
       <div className="flex flex-col items-center">
         <div
           className={
@@ -28,7 +29,7 @@ const LinkBtn = ({ to, text, active }: linkBtnProps) => {
           }
         />
       </div>
-    </Link>
+    </ScrollLink>
   );
 };
 
