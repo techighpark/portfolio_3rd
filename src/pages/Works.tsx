@@ -1,5 +1,11 @@
+import Layout from "@components/layout/Layout";
+
 const Works = () => {
-  return <div className="font-extrabold">Works</div>;
+  return (
+    <Layout pageTitle="Works">
+      <div>Works</div>
+    </Layout>
+  );
 };
 
 export default Works;

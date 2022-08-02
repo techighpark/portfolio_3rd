@@ -1,4 +1,5 @@
 import { PageTitle } from "@components/PageTitle";
+import Footer from "./Footer";
 import Header from "./Header";
 interface LayoutProps {
   pageTitle: string;
@@ -7,10 +8,11 @@ interface LayoutProps {
 
 const Layout = ({ pageTitle, children }: LayoutProps) => {
   return (
-    <div className="w-full h-full ">
+    <div className="relative h-full w-full">
       <PageTitle title={pageTitle} />
       <Header />
       {children}
+      <Footer />
     </div>
   );
 };

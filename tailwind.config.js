@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -39,7 +41,17 @@ module.exports = {
           },
         },
       },
+      boxShadow: {
+        white: "inset 0 15px 25px -15px rgba(255, 255, 255, 0.3)",
+        deep: "inset 0px 3px 3px 1px rgba(0, 0, 0, 0.2)",
+      },
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    plugin(function ({ addVariant }) {
+      addVariant("optional", "&:optional");
+    }),
+  ],
 };
