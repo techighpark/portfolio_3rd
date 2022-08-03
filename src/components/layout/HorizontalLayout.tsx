@@ -1,20 +1,17 @@
 import { PageTitle } from "@components/PageTitle";
 import Footer from "./Footer";
-import Header from "./Header";
 interface LayoutProps {
   pageTitle: string;
   children: React.ReactNode;
 }
 
-const Layout = ({ pageTitle, children }: LayoutProps) => {
+const HorizontalLayout = ({ pageTitle, children }: LayoutProps) => {
   return (
-    <div className="relative h-full w-full">
-      <PageTitle title={pageTitle} />
-      <Header />
+    <div className="h-full w-full overflow-y-hidden overflow-x-scroll whitespace-nowrap">
       {children}
       <Footer />
     </div>
   );
 };
 
-export default Layout;
+export default HorizontalLayout;

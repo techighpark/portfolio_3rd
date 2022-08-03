@@ -1,10 +1,10 @@
-import Layout from "@components/layout/Layout";
+import VerticalLayout from "@components/layout/VerticalLayout";
 
 const Components = () => {
   return (
-    <Layout pageTitle="Components">
+    <VerticalLayout pageTitle="Components">
       <div id="/components">Components</div>
-    </Layout>
+    </VerticalLayout>
   );
 };
 

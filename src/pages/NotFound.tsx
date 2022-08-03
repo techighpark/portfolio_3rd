@@ -1,4 +1,4 @@
-import Layout from "@components/layout/Layout";
+import VerticalLayout from "@components/layout/VerticalLayout";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -9,11 +9,11 @@ const NotFound = () => {
   });
 
   return (
-    <Layout pageTitle="Not Found">
+    <VerticalLayout pageTitle="Not Found">
       <div className="font-extrabold">
         Sorry, page is not found 🫥 Go back to main page soon.
       </div>
-    </Layout>
+    </VerticalLayout>
   );
 };
 

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
 
 interface linkBtnProps {
   to: string;
@@ -8,8 +7,12 @@ interface linkBtnProps {
 }
 
 const LinkBtn = ({ to, text, active }: linkBtnProps) => {
+  function handleBackClick() {
+    // titleRef.current.scrollIntoView({ behavior: "smooth" });
+  }
   return (
-    <ScrollLink to={to} className="flex items-center" spy={true} smooth={true}>
+    // <a href={`#${to}`} className="flex items-center">
+    <button onClick={handleBackClick}>
       <div className="flex flex-col items-center">
         <div
           className={
@@ -29,7 +32,8 @@ const LinkBtn = ({ to, text, active }: linkBtnProps) => {
           }
         />
       </div>
-    </ScrollLink>
+    </button>
+    // </a>
   );
 };
 
