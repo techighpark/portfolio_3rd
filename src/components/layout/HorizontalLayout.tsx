@@ -1,14 +1,11 @@
-import Footer from "./Footer";
 interface LayoutProps {
-  pageTitle: string;
   children: React.ReactNode;
 }
 
-const HorizontalLayout = ({ pageTitle, children }: LayoutProps) => {
+const HorizontalLayout = ({ children }: LayoutProps) => {
   return (
-    <div className="h-full w-full overflow-y-hidden overflow-x-scroll whitespace-nowrap">
+    <div className="h-full w-full overflow-x-hidden overflow-y-hidden whitespace-nowrap">
       {children}
-      <Footer />
     </div>
   );
 };

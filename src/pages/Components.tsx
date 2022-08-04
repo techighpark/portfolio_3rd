@@ -1,11 +1,13 @@
 import VerticalLayout from "@components/layout/VerticalLayout";
 
-const Components = () => {
+import { forwardRef } from "react";
+
+const Components = (props: any, ref: any) => {
   return (
     <VerticalLayout pageTitle="Components">
-      <div id="/components">Components</div>
+      <div ref={el => (ref.current["components"] = el)}>Components</div>
     </VerticalLayout>
   );
 };
 
-export default Components;
+export default forwardRef(Components);
