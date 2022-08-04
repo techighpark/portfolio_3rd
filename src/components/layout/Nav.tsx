@@ -1,5 +1,4 @@
 import LinkBtn from "@components/element/LinkBtn";
-import { useLocation } from "react-router-dom";
 
 const Nav = () => {
   // const { pathname } = useLocation();

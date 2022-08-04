@@ -1,4 +1,3 @@
-import { PageTitle } from "@components/PageTitle";
 import Footer from "./Footer";
 interface LayoutProps {
   pageTitle: string;

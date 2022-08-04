@@ -1,4 +1,4 @@
-import { PageTitle } from "@components/PageTitle";
+import { PageTitle } from "@components/layout/PageTitle";
 interface LayoutProps {
   pageTitle: string;
   children: React.ReactNode;
