@@ -1,4 +1,4 @@
-import VerticalLayout from "@components/layout/VerticalLayout";
+import VerticalLayout from "@components/layout/PageLayout";
 
 import { forwardRef } from "react";
 

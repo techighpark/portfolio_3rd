@@ -10,7 +10,7 @@ interface linkBtnProps {
 
 const LinkBtn = ({ to, text, onClick, isActive }: linkBtnProps, ref: any) => {
   return (
-    <div className="flex items-center" onClick={() => onClick(to)}>
+    <div className="relative flex items-center" onClick={() => onClick(to)}>
       <div className="flex flex-col items-center">
         <div
           className={
@@ -24,13 +24,18 @@ const LinkBtn = ({ to, text, onClick, isActive }: linkBtnProps, ref: any) => {
           </div>
         </div>
 
-        <div
-          className={
-            isActive
-              ? "mt-2 h-2 w-2 rounded-full bg-slate-400 transition-all duration-150"
-              : "mt-2 h-2 w-2 rounded-full border border-slate-300 transition-all duration-150"
-          }
-        />
+        <div className="flex items-center justify-center">
+          <span
+            className={
+              isActive
+                ? "absolute mt-3 inline-flex h-2 w-2 animate-ping rounded-full bg-orange-400 transition-all duration-150"
+                : "mt-3 h-2 w-2 rounded-full border border-orange-200"
+            }
+          />
+          {isActive ? (
+            <span className="relative mt-3 inline-flex h-2 w-2 rounded-full bg-orange-300" />
+          ) : null}
+        </div>
       </div>
     </div>
   );

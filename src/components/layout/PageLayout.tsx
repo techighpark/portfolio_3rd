@@ -4,7 +4,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-const VerticalLayout = ({ pageTitle, children }: LayoutProps) => {
+const PageLayout = ({ pageTitle, children }: LayoutProps) => {
   return (
     <div className="inline-block h-full w-screen border border-red-400">
       <PageTitle title={pageTitle} />
@@ -13,4 +13,4 @@ const VerticalLayout = ({ pageTitle, children }: LayoutProps) => {
   );
 };
 
-export default VerticalLayout;
+export default PageLayout;

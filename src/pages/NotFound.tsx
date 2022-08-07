@@ -1,4 +1,4 @@
-import VerticalLayout from "@components/layout/VerticalLayout";
+import VerticalLayout from "@components/layout/PageLayout";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
