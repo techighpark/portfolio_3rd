@@ -1,19 +1,16 @@
-import { forwardRef, useState } from "react";
+import { forwardRef } from "react";
 
+type ClickFn = (to: string) => void;
 interface linkBtnProps {
   to: string;
   text: string;
-  // onClick: React.MouseEventHandler<HTMLElement>;
+  onClick: ClickFn;
+  isActive: boolean;
 }
 
-const LinkBtn = ({ to, text }: linkBtnProps, ref: any) => {
-  const [isActive, setIsActive] = useState();
-  const [currentPage, setCurrentPage] = useState();
-  const onClick = () => {
-    ref.current[to].scrollIntoView({ behavior: "smooth" });
-  };
+const LinkBtn = ({ to, text, onClick, isActive }: linkBtnProps, ref: any) => {
   return (
-    <div className="flex items-center" onClick={onClick}>
+    <div className="flex items-center" onClick={() => onClick(to)}>
       <div className="flex flex-col items-center">
         <div
           className={
@@ -22,7 +19,9 @@ const LinkBtn = ({ to, text }: linkBtnProps, ref: any) => {
               : "flex aspect-square w-12 transform-gpu items-center justify-center rounded-lg bg-basic-lgiht shadow-white drop-shadow-lg transition-all duration-500 hover:cursor-pointer hover:bg-basic-lgiht hover:drop-shadow-sm active:scale-95 active:bg-basic-lgiht active:shadow-deep"
           }
         >
-          <span className="text-sm font-extralight">{text}</span>
+          <div className="flex flex-col">
+            <span className="text-sm font-extralight">{text}</span>
+          </div>
         </div>
 
         <div

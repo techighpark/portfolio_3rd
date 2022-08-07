@@ -7,15 +7,14 @@ import Home from "./Home";
 import Works from "./Works";
 
 const Main = () => {
-  const scrollRef = useRef<HTMLDivElement[]>([]);
-
+  const pageRef = useRef([]);
   return (
     <HorizontalLayout>
-      <Home ref={scrollRef} />
-      <About ref={scrollRef} />
-      <Works ref={scrollRef} />
-      <Components ref={scrollRef} />
-      <Footer ref={scrollRef} />
+      <Home ref={pageRef} />
+      <About ref={pageRef} />
+      <Works ref={pageRef} />
+      <Components ref={pageRef} />
+      <Footer ref={pageRef} />
     </HorizontalLayout>
   );
 };

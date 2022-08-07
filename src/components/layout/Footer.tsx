@@ -1,5 +1,5 @@
+import Nav from "@components/element/Nav";
 import { forwardRef } from "react";
-import Nav from "../element/Nav";
 
 const Footer = (props: any, ref: any) => {
   return (

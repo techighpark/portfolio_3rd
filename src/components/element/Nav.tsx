@@ -1,34 +1,41 @@
 import LinkBtn from "@components/element/LinkBtn";
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 
 const Nav = (props: any, ref: any) => {
-  // const { pathname } = useLocation();
-
+  const [currentPage, setCurrentPage] = useState<string>("");
+  const onClick = (to: string) => {
+    ref.current[to].scrollIntoView({ behavior: "smooth" });
+    setCurrentPage(to);
+  };
   return (
-    <nav className="flex justify-center space-x-5 rounded-xl border bg-white px-4 pb-3 pt-2 shadow-inner drop-shadow-lg backdrop-blur-sm backdrop-opacity-30">
+    <nav className=" flex justify-center space-x-5 rounded-xl border bg-white px-4 pb-3 pt-2 shadow-inner drop-shadow-lg backdrop-blur-sm backdrop-opacity-30">
       <LinkBtn
         to="home"
         text="Main"
         ref={ref}
-        // active={pathname === "/" ? true : false}
+        onClick={onClick}
+        isActive={currentPage === "home"}
       />
       <LinkBtn
         to="about"
         text="About"
         ref={ref}
-        // active={pathname === "/about" ? true : false}
+        onClick={onClick}
+        isActive={currentPage === "about"}
       />
       <LinkBtn
         to="works"
         text="Works"
         ref={ref}
-        // active={pathname === "/works" ? true : false}
+        onClick={onClick}
+        isActive={currentPage === "works"}
       />
       <LinkBtn
         to="components"
         text="Comp"
         ref={ref}
-        // active={pathname === "/components" ? true : false}
+        onClick={onClick}
+        isActive={currentPage === "components"}
       />
     </nav>
   );
