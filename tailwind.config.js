@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -41,17 +40,48 @@ module.exports = {
           },
         },
       },
+      keyframes: {
+        sand: {
+          "0%, 100%": { transform: "rotate(-1deg)" },
+          "50%": { transform: "rotate(1deg)" },
+        },
+        balloon: {
+          "0%": { bottom: "20%" },
+          "100%": { bottom: "100%", fill: "red" },
+        },
+        textMorhpism: {
+          "0%": {
+            "text-shadow": "5px 5px 5px #d9d9d9, -5px -5px 5px #ffffff",
+          },
+          "25%": {
+            "text-shadow": "-5px 5px 5px #d9d9d9, 5px -5px 5px #ffffff",
+          },
+          "50%": {
+            "text-shadow": "-5px -5px 5px #d9d9d9, 5px 5px 5px #ffffff",
+          },
+          "75%": {
+            "text-shadow": "5px -5px 5px #d9d9d9, -5px 5px 5px #ffffff",
+          },
+          "100%": {
+            "text-shadow": "5px 5px 5px #d9d9d9, -5px -5px 5px #ffffff",
+          },
+        },
+      },
+      animation: {
+        "sand-one": "sand 2s ease-in-out infinite",
+        "sand-two": "sand 2s ease-out infinite",
+        balloon: "balloon 5s ease-in-out infinite",
+        textMorhpism: "textMorhpism 10s linear infinite",
+      },
+
       boxShadow: {
         white: "inset 0 15px 25px -15px rgba(255, 255, 255, 0.3)",
         deep: "inset 0px 3px 3px 1px rgba(0, 0, 0, 0.2)",
+        morUpperSm: "5px 5px 10px #d4d4d4, -5px -5px 10px #ffffff",
+        morDeeperSm: "inset 5px 5px 10px #d4d4d4, inset -5px -5px 10px #ffffff",
+        morRadiusMd: "15px 15px 30px #c2c2c2, -15px -15px 30px #ffffff",
+        morFlat: "15px 15px 30px #c2c2c2, -15px -15px 30px #ffffff",
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/typography"),
-    plugin(function ({ addVariant }) {
-      addVariant("optional", "&:optional");
-    }),
-  ],
 };

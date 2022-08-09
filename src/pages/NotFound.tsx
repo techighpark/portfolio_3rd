@@ -4,13 +4,16 @@ import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
   const navigate = useNavigate();
-  useEffect(() => {
-    setTimeout(() => navigate("/", { replace: true }), 2000);
-  });
+  // useEffect(() => {
+  //   setTimeout(() => navigate("/", { replace: true }), 2000);
+  // });
 
   return (
     <VerticalLayout pageTitle="Not Found">
-      <div className="font-extrabold">
+      <div
+        className="text-8xl font-extrabold uppercase text-white"
+        id="neumorphismText"
+      >
         Sorry, page is not found 🫥 Go back to main page soon.
       </div>
     </VerticalLayout>

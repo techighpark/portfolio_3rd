@@ -6,19 +6,17 @@
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Main from "@pages/Main";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NotFound from "@pages/NotFound";
 function App() {
   return (
     <HelmetProvider>
-      <Main />
-      {/* <Router>
+      <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="works" element={<Works />} />
-          <Route path="components" element={<Components />} />
-          <Route path="about" element={<About />} />
+          <Route path="/" element={<Main />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </Router> */}
+      </Router>
     </HelmetProvider>
   );
 }
