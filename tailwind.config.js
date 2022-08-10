@@ -4,6 +4,13 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        newSebang: ["SEBANG_Gothic_Bold"],
+        newAggro: ["SBAggroB"],
+        newAsac: ["CWDangamAsac-Bold"],
+        newBmjua: ["BMJUA"],
+        newJalnan: ["yg-jalnan"],
+      },
       colors: {
         // transparent: "transparent",
         // current: "currentColor",
@@ -46,8 +53,19 @@ module.exports = {
           "50%": { transform: "rotate(1deg)" },
         },
         balloon: {
-          "0%": { bottom: "20%" },
+          "0%": { bottom: "20%", fill: "red" },
+          "10%": { bottom: "20%", fill: "red" },
+          "50%": { bottom: "70%", fill: "red" },
+          "60%": { bottom: "70%", fill: "red" },
+          "90%": { bottom: "100%", fill: "red" },
           "100%": { bottom: "100%", fill: "red" },
+        },
+        risingText: {
+          "0%": { bottom: "10%" },
+          "10%": { bottom: "10%" },
+          "50%": { bottom: "60%" },
+          "90%": { bottom: "60%", opacity: 1 },
+          "100%": { bottom: "60%", opacity: 0 },
         },
         textMorhpism: {
           "0%": {
@@ -70,7 +88,8 @@ module.exports = {
       animation: {
         "sand-one": "sand 2s ease-in-out infinite",
         "sand-two": "sand 2s ease-out infinite",
-        balloon: "balloon 5s ease-in-out infinite",
+        balloon: "balloon 7s ease-in-out infinite",
+        risingText: "risingText 7s ease-in-out infinite",
         textMorhpism: "textMorhpism 10s linear infinite",
       },
 

@@ -1,4 +1,4 @@
-import VerticalLayout from "@components/layout/PageLayout";
+import PageLayout from "@components/layout/PageLayout";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -9,18 +9,21 @@ const Loading = () => {
   });
 
   return (
-    <VerticalLayout pageTitle="Loading...">
+    <PageLayout pageTitle="Loading..." loading={true}>
       <div className="relative h-full w-full">
-        <div className="fixed top-[20%] left-1/2 translate-x-[-50%]">
-          <div
-            className="z-50 animate-textMorhpism text-6xl font-extrabold"
-            id="neumorphismText"
-          >
-            Welcome to Take High
+        <div
+          className="absolute right-10 top-5 animate-textMorhpism text-2xl font-extrabold"
+          id="neumorphismText"
+        >
+          TAKE HIGH
+        </div>
+        <div className="font-sebang absolute left-[50%] translate-x-[-50%]  animate-risingText drop-shadow-md">
+          <div className=" z-50  text-6xl font-extrabold" id="neumorphismText">
+            Loading...
           </div>
         </div>
-        <svg
-          className="absolute left-[50%]  translate-x-[-50%] animate-balloon drop-shadow-md"
+        {/* <svg
+          className="absolute left-[50%] translate-x-[-50%] animate-balloon drop-shadow-md"
           width="80"
           height="80"
           viewBox="0 0 150 169"
@@ -28,12 +31,17 @@ const Loading = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M96.5498 156.649C127.468 146.772 150 116.193 150 80C150 35.8172 116.421 0 75 0C33.5786 0 0 35.8172 0 80C0 116.365 22.7473 147.063 53.8923 156.788L52.7839 161.468C51.9473 165 55.0354 168.219 58.5994 167.529L65.2127 166.249C66.0566 166.086 66.9284 166.143 67.7439 166.415L73.8725 168.458C74.9273 168.809 76.0692 168.799 77.1177 168.429L82.6867 166.464C83.5459 166.16 84.4716 166.098 85.3638 166.282L91.4207 167.535C94.8431 168.243 97.9176 165.311 97.3725 161.859L96.5498 156.649Z"
             // fill="#fefefe"
           />
-        </svg>
+        </svg> */}
+        <div className="absolute left-[50%] translate-x-[-50%] animate-balloon drop-shadow-md">
+          <div className="z-50 text-6xl font-extrabold" id="neumorphismText">
+            🎈
+          </div>
+        </div>
         <svg
           className="absolute bottom-0 z-50 animate-sand-one"
           fill="none"
@@ -44,14 +52,14 @@ const Loading = () => {
         >
           <filter
             id="a"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
             filterUnits="userSpaceOnUse"
             height="385"
             width="1947"
             x="-11"
             y="0"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               result="hardAlpha"
@@ -94,14 +102,14 @@ const Loading = () => {
         >
           <filter
             id="a"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
             filterUnits="userSpaceOnUse"
             height="410"
             width="1572"
             x="0"
             y="0"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               result="hardAlpha"
@@ -135,7 +143,7 @@ const Loading = () => {
           </g>
         </svg>
       </div>
-    </VerticalLayout>
+    </PageLayout>
   );
 };
 

@@ -2,13 +2,14 @@ import { PageTitle } from "@components/layout/PageTitle";
 interface LayoutProps {
   pageTitle: string;
   children: React.ReactNode;
+  loading?: boolean;
 }
 
-const PageLayout = ({ pageTitle, children }: LayoutProps) => {
+const PageLayout = ({ pageTitle, children, loading }: LayoutProps) => {
   return (
-    <div className="inline-block h-full w-screen border border-red-400">
+    <div className={`relative inline-block h-full w-full`}>
       <PageTitle title={pageTitle} />
-      {children}
+      {loading ? children : <div className="h-full">{children}</div>}
     </div>
   );
 };

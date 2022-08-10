@@ -18,7 +18,7 @@ const Main = () => {
   }, []);
   return (
     <HorizontalLayout>
-      {!loading ? (
+      {loading ? (
         <Loading />
       ) : (
         <>

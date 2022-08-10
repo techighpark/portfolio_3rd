@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
-  font-family: "CWDangamAsac-Bold";
+  font-family: "SBAggroB";
 }
 #root {
   height: 100%;
@@ -54,4 +58,36 @@ a {
     format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "SEBANG_Gothic_Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SBAggroB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-aggro {
+  font-family: "SBAggroB";
+}
+.font-sebang {
+  font-family: "SEBANG_Gothic_Bold";
+}
+.font-asac {
+  font-family: "CWDangamAsac-Bold";
+}
+.font-bmjua {
+  font-family: "BMJUA";
+}
+.font-jalnan {
+  font-family: "yg-jalnan";
 }
