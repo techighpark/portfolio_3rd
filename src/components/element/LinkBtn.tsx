@@ -13,11 +13,12 @@ const LinkBtn = ({ to, text, onClick, isActive }: linkBtnProps, ref: any) => {
     <div className="relative flex items-center" onClick={() => onClick(to)}>
       <div className="flex flex-col items-center">
         <div
-          className={`flex aspect-square w-12 transform-gpu items-center justify-center rounded-xl transition-all duration-500 ${
-            isActive
-              ? "bg-white shadow-morDeeperSm"
-              : "bg-gradient-to-br from-[#ffffff] to-[#e6e6e6] shadow-morUpperSm"
-          }`}
+          className={`flex aspect-square w-12 transform-gpu cursor-pointer items-center justify-center rounded-full transition-all duration-500 
+           active:bg-[#f0f0f0]  active:bg-gradient-to-br active:from-[#f0f0f0] active:to-[#fff] active:shadow-morDeeper-sm ${
+             isActive
+               ? "bg-[#f0f0f0] bg-gradient-to-br  from-[#f0f0f0] to-[#fff] shadow-morDeeper-sm"
+               : " shadow-morUpper-sm"
+           }`}
         >
           <div className="flex flex-col">
             <span className="text-sm font-extralight">{text}</span>

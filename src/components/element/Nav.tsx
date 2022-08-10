@@ -8,7 +8,7 @@ const Nav = (props: any, ref: any) => {
     setCurrentPage(to);
   };
   return (
-    <nav className="flex justify-center space-x-5 rounded-xl bg-gradient-to-br from-[#f2f2f2] to-[#ffffff] px-4 pb-3 pt-3 shadow-morRadiusMd">
+    <nav className="flex justify-center space-x-5 rounded-full bg-gradient-to-br from-[#f2f2f2] to-[#ffffff] px-4 pb-3 pt-3 shadow-morUpper-sm">
       <LinkBtn
         to="home"
         text=""

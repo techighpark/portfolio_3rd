@@ -5,6 +5,7 @@
 html,
 body {
   height: 100%;
+  font-family: "CWDangamAsac-Bold";
 }
 #root {
   height: 100%;
@@ -29,4 +30,28 @@ a {
 #neumorphismText {
   color: #ffffff;
   text-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+}
+
+@font-face {
+  font-family: "yg-jalnan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CWDangamAsac-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }

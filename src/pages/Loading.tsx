@@ -11,16 +11,16 @@ const Loading = () => {
   return (
     <VerticalLayout pageTitle="Loading...">
       <div className="relative h-full w-full">
-        <div className="flex h-full w-full items-center justify-center">
+        <div className="fixed top-[20%] left-1/2 translate-x-[-50%]">
           <div
-            className="animate-textMorhpism text-6xl font-extrabold"
+            className="z-50 animate-textMorhpism text-6xl font-extrabold"
             id="neumorphismText"
           >
             Welcome to Take High
           </div>
         </div>
         <svg
-          className="absolute left-[50%] translate-x-[-50%] animate-balloon drop-shadow-md"
+          className="absolute left-[50%]  translate-x-[-50%] animate-balloon drop-shadow-md"
           width="80"
           height="80"
           viewBox="0 0 150 169"
@@ -35,7 +35,7 @@ const Loading = () => {
           />
         </svg>
         <svg
-          className="absolute bottom-0 animate-sand-one"
+          className="absolute bottom-0 z-50 animate-sand-one"
           fill="none"
           height="376"
           viewBox="0 0 1920 376"
@@ -85,7 +85,7 @@ const Loading = () => {
           </g>
         </svg>
         <svg
-          className="absolute bottom-0 animate-sand-two"
+          className="absolute bottom-0 right-0 animate-sand-two"
           fill="none"
           height="398"
           viewBox="0 0 1558 398"

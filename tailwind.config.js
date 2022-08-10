@@ -77,10 +77,17 @@ module.exports = {
       boxShadow: {
         white: "inset 0 15px 25px -15px rgba(255, 255, 255, 0.3)",
         deep: "inset 0px 3px 3px 1px rgba(0, 0, 0, 0.2)",
-        morUpperSm: "5px 5px 10px #d4d4d4, -5px -5px 10px #ffffff",
-        morDeeperSm: "inset 5px 5px 10px #d4d4d4, inset -5px -5px 10px #ffffff",
-        morRadiusMd: "15px 15px 30px #c2c2c2, -15px -15px 30px #ffffff",
-        morFlat: "15px 15px 30px #c2c2c2, -15px -15px 30px #ffffff",
+
+        "morUpper-sm": "3px 3px 13px #dfdfdf, -3px -3px 13px #ffffff",
+        "morUpper-md": "4px 4px 8px #d4d4d4, -4px -4px 8px #ffffff",
+        "morUpper-lg": "4px 4px 8px #d4d4d4, -4px -4px 8px #ffffff",
+
+        "morDeeper-sm":
+          "inset 5px 5px 10px #d4d4d4, inset -5px -5px 10px #ffffff",
+        "morDeeper-md":
+          "inset 5px 5px 10px #d4d4d4, inset -5px -5px 10px #ffffff",
+        "morDeeper-lg":
+          "inset 5px 5px 10px #d4d4d4, inset -5px -5px 10px #ffffff",
       },
     },
   },
