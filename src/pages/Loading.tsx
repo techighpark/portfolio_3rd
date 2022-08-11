@@ -47,7 +47,7 @@ const Loading = () => {
           fill="none"
           height="376"
           viewBox="0 0 1920 376"
-          width="1920"
+          width="100%"
           xmlns="http://www.w3.org/2000/svg"
         >
           <filter
@@ -97,7 +97,7 @@ const Loading = () => {
           fill="none"
           height="398"
           viewBox="0 0 1558 398"
-          width="1558"
+          width="100%"
           xmlns="http://www.w3.org/2000/svg"
         >
           <filter

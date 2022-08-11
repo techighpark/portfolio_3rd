@@ -10,6 +10,8 @@ html,
 body {
   height: 100%;
   font-family: "SBAggroB";
+  margin: 0;
+  padding: 0;
 }
 #root {
   height: 100%;
