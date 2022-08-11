@@ -9,7 +9,7 @@ const Nav = (props: any, ref: any) => {
   };
   return (
     <nav className="flex justify-center space-x-5 rounded-full bg-gradient-to-br from-[#f2f2f2] to-[#ffffff] px-4 pb-3 pt-3 shadow-morUpper-sm">
-      <LinkBtn
+      {/* <LinkBtn
         to="home"
         text=""
         ref={ref}
@@ -36,7 +36,7 @@ const Nav = (props: any, ref: any) => {
         ref={ref}
         onClick={onClick}
         isActive={currentPage === "components"}
-      />
+      /> */}
     </nav>
   );
 };

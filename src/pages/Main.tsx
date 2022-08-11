@@ -12,21 +12,21 @@ import Works from "./Works";
 const Main = () => {
   const pageRef = useRef([]);
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const time1 = setTimeout(() => setLoading(false), 5000);
-    return () => clearTimeout(time1);
-  }, []);
+  // useEffect(() => {
+  //   const time1 = setTimeout(() => setLoading(false), 5000);
+  //   return () => clearTimeout(time1);
+  // }, []);
   return (
     <HorizontalLayout>
       {loading ? (
         <Loading />
       ) : (
         <>
-          <Home ref={pageRef} />
+          {/* <Home ref={pageRef} />
           <About ref={pageRef} />
           <Works ref={pageRef} />
           <Components ref={pageRef} />
-          <Footer ref={pageRef} />
+          <Footer ref={pageRef} /> */}
         </>
       )}
     </HorizontalLayout>

@@ -1,12 +1,12 @@
 import PageLayout from "@components/layout/PageLayout";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Loading = () => {
-  const navigate = useNavigate();
-  useEffect(() => {
-    setTimeout(() => navigate("/", { replace: true }), 2000);
-  });
+  // const navigate = useNavigate();
+  // useEffect(() => {
+  //   setTimeout(() => navigate("/", { replace: true }), 2000);
+  // });
 
   return (
     <PageLayout pageTitle="Loading..." loading={true}>
